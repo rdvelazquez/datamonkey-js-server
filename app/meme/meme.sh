@@ -23,6 +23,8 @@ export HYPHY_PATH=$HYPHY_PATH
 
 trap 'echo "Error" > $STATUS_FILE; exit 1' ERR
 
+echo "$FN"
+echo "------------------ TESTING123------------------"
 echo "(echo $GENETIC_CODE; echo $FN; echo $TREE_FN; echo 1; echo 1;) | $HYPHY LIBPATH=$HYPHY_PATH $MEME >> $PROGRESS_FILE"
 (echo $GENETIC_CODE; echo $FN; echo $TREE_FN; echo 1; echo "0.1";) | $HYPHY LIBPATH=$HYPHY_PATH $MEME >> $PROGRESS_FILE
 

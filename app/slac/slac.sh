@@ -37,7 +37,8 @@ NUM_SAMPLES=100
 PVAL=0.1
 
 # Using 1 for now, but should accept labeled branches
-echo '(echo '$GENETIC_CODE'; echo '$FN'; echo '$TREE_FN'; echo '$BRANCHES'; echo '$NUM_SAMPLES'; echo '$PVAL';) | '$HYPHY' LIBPATH='$HYPHY_PATH' ' $SLAC''
-(echo $GENETIC_CODE; echo $FN; echo $TREE_FN; echo $BRANCHES; echo $NUM_SAMPLES; echo $PVAL;) | $HYPHY LIBPATH=$HYPHY_PATH $SLAC > $PROGRESS_FILE
+#echo '(echo '$GENETIC_CODE'; echo '$FN'; echo '$TREE_FN'; echo '$BRANCHES'; echo '$NUM_SAMPLES'; echo '$PVAL';) | '$HYPHY' LIBPATH='$HYPHY_PATH' ' $SLAC''
+#(echo $GENETIC_CODE; echo $FN; echo $TREE_FN; echo $BRANCHES; echo $NUM_SAMPLES; echo $PVAL;) | $HYPHY LIBPATH=$HYPHY_PATH $SLAC > $PROGRESS_FILE
+$HYPHY slac --alignment $FN --tree $TREE_FN > $PROGRESS_FILE
 
 echo "Completed" > $STATUS_FILE

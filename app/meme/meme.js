@@ -29,6 +29,9 @@ var meme = function(socket, stream, params) {
   self.results_fn = self.fn + ".MEME.json";
   self.progress_fn = self.fn + ".meme.progress";
   self.tree_fn = self.fn + ".tre";
+  
+  console.log('----- testing from meme.js -------');
+  console.log('self.fn: ', self.fn);
 
   self.qsub_params = [
     "-q",
